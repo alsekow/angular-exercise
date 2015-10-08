@@ -5,7 +5,10 @@ Approximate coding time 3 hours.
 To set up the project:
 
 1) Clone the repo
+
 2) Run npm install
+
 3) Run bower install
+
 4) Run grunt serve
 

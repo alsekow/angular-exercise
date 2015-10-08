@@ -1,0 +1,38 @@
+<section class="col-md-4 col-md-offset-4">
+    <div ng-controller="ListController" class="list-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" placeholder="search" ng-model="search" class="form-control" />
+            </div>
+            <div class="col-md-2 col-md-offset-2 text-right">
+                Sort by:
+            </div>
+            <div class="col-md-4">
+                <select ng-model="itemOrder" class="form-control">
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                </select>
+                Asc: <input type="radio" ng-model="direction" checked />
+                Desc: <input type="radio" ng-model="direction" value="reverse" checked />
+            </div>
+        </div>
+        <div class="row">
+            <ul>
+                <li ng-repeat="item in list | filter: search | orderBy: itemOrder:direction" list-item="item"></li>
+            </ul>
+        </div>
+        <form name="addform" novalidate>
+            <div class="row">
+                <div class="col-md-8">
+                    <input type="text" ng-model="addedItem.name" required class="form-control" placeholder="Name">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" ng-model="addedItem.price" required class="form-control" placeholder="Price">
+                </div>
+                <div class="col-md-2">
+                    <input type="submit" value="add" ng-click="add($event)" ng-disabled="!(addform.$valid)" class="btn btn-info float-right">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

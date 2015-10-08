@@ -1,0 +1,7 @@
+<li class="row">
+    <span ng-bind="item.name" ng-hide="editMode" ng-click="edit($event)" class="col-md-3"></span>
+    <span class="col-md-3">
+        {{item.price | currency}}
+    </span>
+    <input type="button" value="delete" ng-click="delete(item)" ng-hide="editMode" class="btn btn-danger col-md-2"/>
+</li>

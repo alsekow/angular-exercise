@@ -1,0 +1,65 @@
+@import 'base.less';
+@import 'typo.less';
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.float-right {
+	float: right;
+}
+
+.list-wrapper {
+	width: 100%;
+	margin: 40px auto 0px;
+
+	li {
+		.cf;
+		display: block;
+		margin: 10px 0px;
+		min-height: 30px;
+		line-height: 30px;
+	}
+
+	input {
+		&[type="button"] {
+			margin: 0 10px;
+			float: right;
+		}
+	}
+
+}
+
+section {
+	width: 50%;
+	float: left;
+}
+
+
+svg {
+	margin: 0px 100px;
+}
+
+.axis {
+	path, line {
+		fill: none;
+		stroke-width: 1px;
+		stroke: black;
+	}
+}
+
+.row {
+	margin-bottom: 20px;
+}
